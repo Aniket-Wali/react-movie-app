@@ -1,9 +1,25 @@
 import MoviePagination from "../Components/Pagination";
+import { useHistory } from "react-router-dom";
+
 //  Movies Rows
 const MovieRow = ({ movieData }) => {
+  const history = useHistory();
+
+  const goToMovieDetails = () => {
+    history.push(`/${movieData.imdbID}`);
+  };
+
   return (
     <tr>
-      <td>{movieData.imdbID}</td>
+      <td
+        style={{
+          color: "blue",
+          cursor: "pointer"
+        }}
+        onClick={goToMovieDetails}
+      >
+        {movieData.imdbID}
+      </td>
       <td>{movieData.Title}</td>
       <td>{movieData.Year}</td>
       <td>
