@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Button } from "reactstrap";
 import { useHistory, useLocation } from "react-router-dom";
 
+import Loader from './Components/Loader';
+
 const apikey = "8b0354c6";
 
 const MovieDetailsSection = (props) => {
@@ -47,6 +49,7 @@ const MovieDetailsSection = (props) => {
       </Button>
 
       <div>
+        {!movieData.Title && <Loader />}
         <img src={movieData.Poster} alt={movieData.Title} />
         <h1>Title : {movieData.Title}</h1>
         <h1>Year : {movieData.Year}</h1>

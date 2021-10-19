@@ -1,5 +1,6 @@
-import MoviePagination from "../Components/Pagination";
 import { useHistory } from "react-router-dom";
+
+import MoviePagination from "../Components/Pagination";
 
 //  Movies Rows
 const MovieRow = ({ movieData }) => {
