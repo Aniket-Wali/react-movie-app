@@ -64,7 +64,7 @@ const Navbar = ({ appName = "Default" }) => {
 // Footer
 const Footer = () => {
   return (
-    <footer className="p-2 bg-dark text-white footer fixed-bottom">
+    <footer className="p-2 bg-dark text-white footer">
       <p>Copyright @ ABC.com</p>
     </footer>
   );
