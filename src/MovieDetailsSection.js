@@ -3,6 +3,7 @@ import { Button } from "reactstrap";
 import { useHistory, useLocation } from "react-router-dom";
 
 import Loader from './Components/Loader';
+import MovieModal from './Components/Modal'
 
 const apikey = "8b0354c6";
 
@@ -60,6 +61,7 @@ const MovieDetailsSection = (props) => {
         <h1>Language : {movieData.Language}</h1>
         <h1>Genre : {movieData.Genre}</h1>
       </div>
+      <MovieModal buttonLabel={"Show More!"} movieData={movieData}/>
     </div>
   );
 };
